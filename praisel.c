@@ -8,6 +8,6 @@ int main(void)
   char name[40];
   printf("what's your name?\n"); 
   scanf("%s",name); 
-  printf("Hello,%s. %s\n",name,PRAISE);
+  printf("Hello,%s. %s\n",name,PRAISE);//注意：此处只打印name的第一个单词，遇到第一个空白就不再读取输入。
   return 0;
  }
