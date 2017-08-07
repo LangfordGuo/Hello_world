@@ -8,8 +8,9 @@ int main()
     float weight, 
     volume; 
     int size, letters; 
-    char name[40]; //可容纳40个字符的数组       
-    /*多加一句*/ 
+    char name[40]; //可容纳40个字符的数组 ,用数组【array】储存字符串【character string】.      
+    /*多加一句*/
+    /*数组：同类型数据元素的有序序列。方括号表示数组，数字表示元素数量，char表示每个元素的数据类型*/
     int testNo; 
     printf("请输入一个测试数字:\n"); 
     scanf("%d", &testNo); 
