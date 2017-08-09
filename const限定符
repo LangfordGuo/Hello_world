@@ -1,0 +1,13 @@
+/*const关键字用于限定一个变量为只读*/
+// 使用limit.h 和float头文件中定义的明示常量
+#include <stdio.h>#include <limits.h>
+#include <float.h>
+int main(void)
+{ 
+  printf("Some number limits for this system:\n"); 
+  printf("Biggest int:%d\n",INT_MAX); 
+  printf("Smallest long long:%lld\n",LLONG_MIN); 
+  printf("Largest double:%e\n",DBL_MAX);
+  printf("1 byte = %d bits on this system.\n",CHAR_BIT);
+  return 0;
+}
