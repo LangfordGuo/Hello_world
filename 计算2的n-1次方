@@ -1,0 +1,24 @@
+#include <stdio.h>
+#define SQUARES 64 //棋盘中的方格子数
+int main()
+{ 
+//int Tatal = 1; 
+//Tatal = 2; 
+int count = 1; 
+/*
+ 格子：1 2 3 4 5  ... n       ... 
+ 麦粒：1 2 4 8 16 ... 2^(n-1) ... 
+ 现在的问题是：如何表现这2^(n-1)?  (待会儿再考虑他们的和问题) 
+ int rice=1; 
+ while (n<=64) 
+ {  
+ rice= 2 * (上一个格子的rice) ;  
+ rice = 2 *rice;  
+ printf("2^(%d-1)=%d",n,rice);  
+ n = n+1 ; 
+ } 
+ */ 
+ /* int current = 1; while (count <= 64) {  current = 2 * current;  printf("第%d格，有%d粒米\n",count,current);  count = count +1 ; } */ 
+ long rice=1; int n = 1; int Tatal = 1; while (n<=64) {  //rice= 2 * (上一个格子的rice) ;    printf("2^(%d-1)=%d    Tatal = %d \n",n,rice,Tatal);  //printf("Taltal");  Tatal = Tatal + 2 * rice;  rice = 2 * rice;  n = n+1 ; }
+ return 0;
+}
