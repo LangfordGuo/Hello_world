@@ -2,7 +2,7 @@
 setlocal ENABLEDELAYEDEXPANSION
 REM 内容来源于互联网，批处理命令学习之 ---- 如何在bat文件中创建数组，并使用plink 与linux交互
 set PASSWORD=root
-set smbpasswd=huawei
+set smbpasswd=
 set user=root
 set PORT=22
 net use /delete Y: /y
