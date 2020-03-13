@@ -16,14 +16,14 @@ for /l %%i in (1,1,%len%) do (
 	echo array[%%i]=!array[%%i]! >> !array[%%i]!.log
 	net use /delete Z: /y >> !array[%%i]!.log 
 	net use  Z:  "\\!array[%%i]!\root\usr1"  %smbpasswd% /USER:%user% >> !array[%%i]!.log
-	echo plink.exe -pw %PASSWORD% %user%@!array[%%i]! -P %PORT% mkdir /usr1/build  >> !array[%%i]!_ecgp.log
-	echo y|plink.exe -pw %PASSWORD% %user%@!array[%%i]! -P %PORT% mkdir /usr1/build >> !array[%%i]!_ecgp.log
-	echo copy Y:\pom\CGPV2R19_Code\code\current\CGPV200R019C00_Depends\uvp\latest\ecgp_Software\03.DebugTools\Euler_compile_env.tar.gz \\!array[%%i]!\root\usr1\build\ >> !array[%%i]!_ecgp.log
-	copy Y:\pom\CGPV2R19_Code\code\current\CGPV200R019C00_Depends\uvp\latest\ecgp_Software\03.DebugTools\Euler_compile_env.tar.gz \\!array[%%i]!\root\usr1\build\ >> !array[%%i]!_ecgp.log
-	echo y|plink.exe -pw %PASSWORD% %user%@!array[%%i]! -P %PORT% cd /usr1/build; tar -xzvf Euler_compile_env.tar.gz; mv Euler_compile_env /usr1/Euler_compile_env_ecgp >> !array[%%i]!_ecgp.log
-	echo copy Y:\pom\CGPV2R19_Code\code\current\CGPV200R019C00_Depends\uvp\latest\Software\03.DebugTools\Euler_compile_env.tar.gz \\!array[%%i]!\root\usr1\ >> !array[%%i]!_cgp.log
-	copy Y:\pom\CGPV2R19_Code\code\current\CGPV200R019C00_Depends\uvp\latest\Software\03.DebugTools\Euler_compile_env.tar.gz \\!array[%%i]!\root\usr1\ >> !array[%%i]!_cgp.log
-	echo y|plink.exe -pw %PASSWORD% %user%@!array[%%i]! -P %PORT% cd /usr1/; tar -xzvf Euler_compile_env.tar.gz >> !array[%%i]!_cgp.log
+	echo plink.exe -pw %PASSWORD% %user%@!array[%%i]! -P %PORT% mkdir /usr1/build  >> !array[%%i]!_eglf.log
+	echo y|plink.exe -pw %PASSWORD% %user%@!array[%%i]! -P %PORT% mkdir /usr1/build >> !array[%%i]!_eglf.log
+	echo copy Y:\pom\glfV2R19_Code\code\current\guolongfei\uvp\latest\eglf_Software\03.DebugTools\Linux_compile_env.tar.gz \\!array[%%i]!\root\usr1\build\ >> !array[%%i]!_eglf.log
+	copy Y:\pom\glfV2R19_Code\code\current\guolongfei\uvp\latest\eglf_Software\03.DebugTools\Linux_compile_env.tar.gz \\!array[%%i]!\root\usr1\build\ >> !array[%%i]!_eglf.log
+	echo y|plink.exe -pw %PASSWORD% %user%@!array[%%i]! -P %PORT% cd /usr1/build; tar -xzvf Linux_compile_env.tar.gz; mv Linux_compile_env /usr1/Linux_compile_env_eglf >> !array[%%i]!_eglf.log
+	echo copy Y:\pom\glfV2R19_Code\code\current\guolongfei\uvp\latest\Software\03.DebugTools\Linux_compile_env.tar.gz \\!array[%%i]!\root\usr1\ >> !array[%%i]!_glf.log
+	copy Y:\pom\glfV2R19_Code\code\current\guolongfei\uvp\latest\Software\03.DebugTools\Linux_compile_env.tar.gz \\!array[%%i]!\root\usr1\ >> !array[%%i]!_glf.log
+	echo y|plink.exe -pw %PASSWORD% %user%@!array[%%i]! -P %PORT% cd /usr1/; tar -xzvf Linux_compile_env.tar.gz >> !array[%%i]!_glf.log
 )
 
 pause
